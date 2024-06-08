@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": "ad55",
+      "productName": "testing",
+      "price": 3000,
+      "desc": "this is frist testing product"
+    },
+    {
+      "id": "0bf9",
+      "productName": "demo",
+      "price": 520,
+      "desc": "this is frist testing product"
+    }
+  ]
+}
