@@ -1,6 +1,11 @@
 import { call, put } from "redux-saga/effects";
-import { get_product } from "../../admin/api";
-import { GET_PRODUCT_ERROR, GET_PRODUCT_SUCCESS } from "../../admin/action";
+import { get_product, post_product } from "../../admin/api";
+import {
+  GET_PRODUCT_ERROR,
+  GET_PRODUCT_SUCCESS,
+  POST_PRODUCT_ERROR,
+  POST_PRODUCT_SUCCESS,
+} from "../../admin/action";
 
 function* handle_get_product(action) {
   try {
@@ -15,4 +20,13 @@ function* handle_get_product(action) {
   }
 }
 
-export { handle_get_product };
+function* handle_post_product(action) {
+  try {
+    let { data, status } = yield call(post_product, action);
+    yield put({ type: POST_PRODUCT_SUCCESS, payload: data });
+  } catch (err) {
+    yield put({ type: POST_PRODUCT_ERROR, payload: err });
+  }
+}
+
+export { handle_get_product, handle_post_product };

@@ -2,6 +2,9 @@ import {
   GET_PRODUCT_ERROR,
   GET_PRODUCT_PENDING,
   GET_PRODUCT_SUCCESS,
+  POST_PRODUCT_ERROR,
+  POST_PRODUCT_PENDING,
+  POST_PRODUCT_SUCCESS,
 } from "./action";
 
 let initialState = {
@@ -14,7 +17,7 @@ let adminReducer = (state = initialState, action) => {
   console.log(action, "action fro reducer");
 
   switch (action.type) {
-    case GET_PRODUCT_PENDING: {
+    case (GET_PRODUCT_PENDING, POST_PRODUCT_PENDING): {
       return {
         ...state,
         isLoading: true,
@@ -27,8 +30,16 @@ let adminReducer = (state = initialState, action) => {
         product: action.payload,
       };
     }
+    //for post product success
 
-    case GET_PRODUCT_ERROR: {
+    case POST_PRODUCT_SUCCESS: {
+      return {
+        isLoading: false,
+        product: state.product.concat(action.payload),
+      };
+    }
+
+    case (GET_PRODUCT_ERROR, POST_PRODUCT_ERROR): {
       return {
         isLoading: false,
         isError: action.payload,
