@@ -1,58 +1,22 @@
 {
   "products": [
     {
-      "id": "ad55",
-      "productName": "testing",
-      "price": 3000,
-      "desc": "this is frist testing product"
+      "id": "577f",
+      "productName": "asdas",
+      "price": "23425",
+      "desc": "sdfsdfsd"
     },
     {
-      "id": "0bf9",
-      "productName": "demo",
-      "price": 520,
-      "desc": "this is frist testing product"
+      "id": "127b",
+      "productName": "asdas",
+      "price": "23425",
+      "desc": "sdfsdfsd"
     },
     {
-      "id": "d3ae",
-      "productName": "asdasd",
-      "price": "12423",
-      "desc": "sadfsdf"
-    },
-    {
-      "id": "784e",
-      "productName": "asdasd",
-      "price": "24343",
-      "desc": "sdf"
-    },
-    {
-      "id": "5fc1",
-      "productName": "asdfasdfa",
-      "price": "2345235",
-      "desc": "dasdasd"
-    },
-    {
-      "id": "b24c",
-      "productName": "asdasfsdfsdfsvxcvsfdfsd",
-      "price": "234235",
-      "desc": "dsfvgdf"
-    },
-    {
-      "id": "0d41",
-      "productName": "apple",
-      "price": "124",
-      "desc": "asdasda"
-    },
-    {
-      "id": "8702",
-      "productName": "sdfsdvv",
-      "price": "3436",
-      "desc": "asdfsdgxv"
-    },
-    {
-      "id": "2552",
-      "productName": "dsffdf",
-      "price": "4253",
-      "desc": "svsdfvsdfds"
+      "id": "6b76",
+      "productName": "garvit",
+      "price": "23425",
+      "desc": "sdfsdfsd"
     }
   ]
 }
