@@ -7,6 +7,7 @@ import {
   POST_PRODUCT_PENDING,
   UPDATE_PRODUCT_PENDING,
 } from "./redux-saga/admin/action";
+import Data from "./components/Data";
 
 function App() {
   const [view, setview] = useState({});
@@ -63,36 +64,37 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <input type="text" ref={productName} />
-      <input type="number" ref={price} />
-      <input type="text" ref={desc} />
-      <button onClick={addProduct}>submit</button>
-      <br />
-      <br />
-      <br />
+    <Data />
+    // <div className="App">
+    //   <input type="text" ref={productName} />
+    //   <input type="number" ref={price} />
+    //   <input type="text" ref={desc} />
+    //   <button onClick={addProduct}>submit</button>
+    //   <br />
+    //   <br />
+    //   <br />
 
-      <input
-        type="text"
-        name="productName"
-        value={view.productName}
-        onChange={handle}
-      />
-      <input type="number" name="price" value={view.price} onChange={handle} />
-      <input type="text" name="desc" value={view.desc} onChange={handle} />
-      <button onClick={updateProduct}>update</button>
-      {result.product.map((val, index) => {
-        return (
-          <>
-            <h1>{val.id}</h1>
-            <h2>{val.productName}</h2>
-            <h3>{val.price}</h3>
-            <button onClick={() => deleteProduct(val.id)}>delete</button>
-            <button onClick={() => viewData(val)}>view</button>
-          </>
-        );
-      })}
-    </div>
+    //   <input
+    //     type="text"
+    //     name="productName"
+    //     value={view.productName}
+    //     onChange={handle}
+    //   />
+    //   <input type="number" name="price" value={view.price} onChange={handle} />
+    //   <input type="text" name="desc" value={view.desc} onChange={handle} />
+    //   <button onClick={updateProduct}>update</button>
+    //   {result.product.map((val, index) => {
+    //     return (
+    //       <>
+    //         <h1>{val.id}</h1>
+    //         <h2>{val.productName}</h2>
+    //         <h3>{val.price}</h3>
+    //         <button onClick={() => deleteProduct(val.id)}>delete</button>
+    //         <button onClick={() => viewData(val)}>view</button>
+    //       </>
+    //     );
+    //   })}
+    // </div>
   );
 }
 
